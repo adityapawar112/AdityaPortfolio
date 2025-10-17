@@ -24,13 +24,5 @@
   "installCommand": "pnpm install",
   "env": {
     "NODE_ENV": "production"
-  },
-  "analytics": {
-    "providers": [
-      {
-        "name": "Vercel Analytics",
-        "analyticsId": "vercel-analytics"
-      }
-    ]
   }
 }
