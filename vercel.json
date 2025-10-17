@@ -12,6 +12,12 @@
       "dest": "/server/node-build.mjs"
     },
     {
+      "src": "/assets/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
       "src": "/(.*)",
       "dest": "/spa/index.html"
     }
