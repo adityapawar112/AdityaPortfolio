@@ -3,21 +3,27 @@
   "builds": [
     {
       "src": "dist/spa/index.html",
-      "use": "@vercel/static"
+      "use": "@vercel/static",
+      "config": {
+        "distDir": "dist/spa"
+      }
     },
     {
       "src": "dist/server/node-build.mjs",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["dist/server/**"]
+      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/dist/server/node-build.mjs"
+      "dest": "dist/server/node-build.mjs"
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/spa/index.html"
+      "dest": "dist/spa/index.html"
     }
   ],
   "buildCommand": "npm run vercel-build",
