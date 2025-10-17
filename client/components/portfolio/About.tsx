@@ -36,7 +36,7 @@ export default function About() {
               className={`rounded p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md group ${theme === 'dark' ? 'bg-primary/10' : ''}`}
               style={{ backgroundColor: theme === 'dark' ? '' : '#f5f5f5' }}
             >
-              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300 hover:text-primary cursor-pointer">
                 Full-Stack Expertise
               </h3>
               <p className="text-muted-foreground leading-relaxed font-light">
@@ -50,7 +50,7 @@ export default function About() {
               className={`rounded p-6 border border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-md group ${theme === 'dark' ? 'bg-secondary/10' : ''}`}
               style={{ backgroundColor: theme === 'dark' ? '' : '#f5f5f5' }}
             >
-              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-secondary transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-secondary transition-colors duration-300 hover:text-secondary cursor-pointer">
                 DevOps & Cloud
               </h3>
               <p className="text-muted-foreground leading-relaxed font-light">

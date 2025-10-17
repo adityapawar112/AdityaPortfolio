@@ -76,7 +76,7 @@ export default function Education() {
 
         {/* Certifications */}
         <div className="animate-in fade-in duration-700">
-          <h3 className="text-2xl font-bold text-foreground mb-6">
+          <h3 className="text-2xl font-bold text-foreground mb-6 hover:text-accent transition-colors duration-300 cursor-pointer">
             Certifications
           </h3>
           <ul className="space-y-4">

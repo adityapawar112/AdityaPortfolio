@@ -81,7 +81,7 @@ export default function Skills() {
         <div className="space-y-16">
           {/* Languages */}
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-8">
+            <h3 className="text-xl font-semibold text-foreground mb-8 hover:text-accent transition-colors duration-300 cursor-pointer">
               Languages
             </h3>
             <div className="flex items-center justify-center flex-wrap gap-8">
@@ -108,7 +108,7 @@ export default function Skills() {
 
           {/* Frontend */}
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-8">
+            <h3 className="text-xl font-semibold text-foreground mb-8 hover:text-accent transition-colors duration-300 cursor-pointer">
               Frontend
             </h3>
             <div className="flex items-center justify-center flex-wrap gap-8">
@@ -135,7 +135,7 @@ export default function Skills() {
 
           {/* Backend */}
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-8">
+            <h3 className="text-xl font-semibold text-foreground mb-8 hover:text-accent transition-colors duration-300 cursor-pointer">
               Backend
             </h3>
             <div className="flex items-center justify-center flex-wrap gap-8">
@@ -162,7 +162,7 @@ export default function Skills() {
 
           {/* Databases */}
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-8">
+            <h3 className="text-xl font-semibold text-foreground mb-8 hover:text-accent transition-colors duration-300 cursor-pointer">
               Databases & ORMs
             </h3>
             <div className="flex items-center justify-center flex-wrap gap-8">
@@ -189,7 +189,7 @@ export default function Skills() {
 
           {/* Data Science */}
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-8">
+            <h3 className="text-xl font-semibold text-foreground mb-8 hover:text-accent transition-colors duration-300 cursor-pointer">
               Data Science & ML
             </h3>
             <div className="flex items-center justify-center flex-wrap gap-8">
@@ -216,7 +216,7 @@ export default function Skills() {
 
           {/* DevOps & Tools */}
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-8">
+            <h3 className="text-xl font-semibold text-foreground mb-8 hover:text-accent transition-colors duration-300 cursor-pointer">
               DevOps & Tools
             </h3>
             <div className="flex items-center justify-center flex-wrap gap-8">
