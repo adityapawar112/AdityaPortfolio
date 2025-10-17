@@ -9,7 +9,7 @@ export function createServer() {
   // Middleware
   app.use(cors({
     origin: process.env.NODE_ENV === 'production'
-      ? ['https://your-domain.vercel.app'] // Replace with your actual Vercel domain
+      ? true // Allow all origins in production for Vercel
       : true,
     credentials: true
   }));

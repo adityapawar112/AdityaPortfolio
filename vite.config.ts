@@ -15,9 +15,13 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist/spa",
+    assetsDir: "assets",
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "index.html"),
+      },
+      output: {
+        manualChunks: undefined,
       },
     },
   },
