@@ -3,11 +3,6 @@
   "buildCommand": "npm run vercel-build",
   "installCommand": "pnpm install",
   "outputDirectory": "dist",
-  "functions": {
-    "server/node-build.mjs": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "routes": [
     {
       "src": "/api/(.*)",
