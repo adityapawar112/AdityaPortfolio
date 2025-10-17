@@ -34,7 +34,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 lg:pl-32">
+    <section id="education" className="py-20">
       <div className="max-w-6xl mx-auto px-6">   
         <SectionTitle
           title="Education"

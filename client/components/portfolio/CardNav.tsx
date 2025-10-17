@@ -213,6 +213,35 @@ const CardNav: React.FC<CardNavProps> = ({
             />
           </div>
 
+          {/* Back to Top Button - Center */}
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            style={{
+              backgroundColor: currentColors.accent,
+              color: 'white',
+              border: 'none',
+              cursor: 'pointer'
+            }}
+            aria-label="Back to top"
+            title="Back to top"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 10l7-7m0 0l7 7m-7-7v18"
+              />
+            </svg>
+          </button>
+
           {/* Theme Toggle Button */}
           <button
             type="button"

@@ -80,7 +80,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 lg:pl-32">
+    <section id="projects" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <SectionTitle
           title="Projects"

@@ -71,7 +71,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 lg:pl-32">
+    <section id="skills" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <SectionTitle
           title="Skills"
@@ -91,7 +91,7 @@ export default function Skills() {
                   href={logo.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  className="flex items-center justify-center transition-all duration-200 hover:scale-110 group"
                   style={{
                     fontSize: '48px',
                     textDecoration: 'none',
@@ -100,7 +100,9 @@ export default function Skills() {
                   title={logo.title}
                   aria-label={`Visit ${logo.title} website`}
                 >
-                  {logo.node}
+                  <span className="group-hover:text-primary transition-colors duration-200">
+                    {logo.node}
+                  </span>
                 </a>
               ))}
             </div>
@@ -118,7 +120,7 @@ export default function Skills() {
                   href={logo.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  className="flex items-center justify-center transition-all duration-200 hover:scale-110 group"
                   style={{
                     fontSize: '48px',
                     textDecoration: 'none',
@@ -127,7 +129,9 @@ export default function Skills() {
                   title={logo.title}
                   aria-label={`Visit ${logo.title} website`}
                 >
-                  {logo.node}
+                  <span className="group-hover:text-primary transition-colors duration-200">
+                    {logo.node}
+                  </span>
                 </a>
               ))}
             </div>
@@ -145,7 +149,7 @@ export default function Skills() {
                   href={logo.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  className="flex items-center justify-center transition-all duration-200 hover:scale-110 group"
                   style={{
                     fontSize: '48px',
                     textDecoration: 'none',
@@ -154,7 +158,9 @@ export default function Skills() {
                   title={logo.title}
                   aria-label={`Visit ${logo.title} website`}
                 >
-                  {logo.node}
+                  <span className="group-hover:text-primary transition-colors duration-200">
+                    {logo.node}
+                  </span>
                 </a>
               ))}
             </div>
@@ -172,7 +178,7 @@ export default function Skills() {
                   href={logo.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  className="flex items-center justify-center transition-all duration-200 hover:scale-110 group"
                   style={{
                     fontSize: '48px',
                     textDecoration: 'none',
@@ -181,7 +187,9 @@ export default function Skills() {
                   title={logo.title}
                   aria-label={`Visit ${logo.title} website`}
                 >
-                  {logo.node}
+                  <span className="group-hover:text-primary transition-colors duration-200">
+                    {logo.node}
+                  </span>
                 </a>
               ))}
             </div>
@@ -199,7 +207,7 @@ export default function Skills() {
                   href={logo.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  className="flex items-center justify-center transition-all duration-200 hover:scale-110 group"
                   style={{
                     fontSize: '48px',
                     textDecoration: 'none',
@@ -208,7 +216,9 @@ export default function Skills() {
                   title={logo.title}
                   aria-label={`Visit ${logo.title} website`}
                 >
-                  {logo.node}
+                  <span className="group-hover:text-primary transition-colors duration-200">
+                    {logo.node}
+                  </span>
                 </a>
               ))}
             </div>
@@ -226,7 +236,7 @@ export default function Skills() {
                   href={logo.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  className="flex items-center justify-center transition-all duration-200 hover:scale-110 group"
                   style={{
                     fontSize: '48px',
                     textDecoration: 'none',
@@ -235,7 +245,9 @@ export default function Skills() {
                   title={logo.title}
                   aria-label={`Visit ${logo.title} website`}
                 >
-                  {logo.node}
+                  <span className="group-hover:text-primary transition-colors duration-200">
+                    {logo.node}
+                  </span>
                 </a>
               ))}
             </div>

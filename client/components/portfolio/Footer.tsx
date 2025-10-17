@@ -2,7 +2,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground/95 text-background py-12 lg:pl-64 border-t border-border">
+    <footer className="bg-foreground/95 text-background py-12 border-t border-border">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <p className="text-sm mb-2">
           © {currentYear} Aditya Pawar. All rights reserved.

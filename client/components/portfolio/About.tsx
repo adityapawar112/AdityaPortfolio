@@ -4,7 +4,7 @@ import { useTheme } from "@/hooks/use-theme";
 export default function About() {
   const { theme } = useTheme();
   return (
-    <section id="about" className="py-20 lg:pl-32">
+    <section id="about" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <SectionTitle
           title="About"
@@ -34,7 +34,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-6 pt-8">
             <div
               className={`rounded p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md group ${theme === 'dark' ? 'bg-primary/10' : ''}`}
-              style={{ backgroundColor: theme === 'dark' ? '' : '#f5f5f5' }}
+              style={{ backgroundColor: theme === 'dark' ? '' : '#a8d5a8' }}
             >
               <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300 hover:text-primary cursor-pointer">
                 Full-Stack Expertise
@@ -48,7 +48,7 @@ export default function About() {
 
             <div
               className={`rounded p-6 border border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-md group ${theme === 'dark' ? 'bg-secondary/10' : ''}`}
-              style={{ backgroundColor: theme === 'dark' ? '' : '#f5f5f5' }}
+              style={{ backgroundColor: theme === 'dark' ? '' : '#7dd3c0' }}
             >
               <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-secondary transition-colors duration-300 hover:text-secondary cursor-pointer">
                 DevOps & Cloud

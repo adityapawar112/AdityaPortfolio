@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-8 lg:pl-64 lg:pt-0"
+      className="min-h-screen flex items-center justify-center pt-8 lg:pt-0"
     >
       <div className="max-w-6xl mx-auto px-6 py-0 w-full">
         <div className="space-y-8 animate-in fade-in duration-700">

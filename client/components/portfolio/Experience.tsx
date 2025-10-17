@@ -3,7 +3,7 @@ import ExperienceCard from "./ExperienceCard";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 lg:pl-32">
+    <section id="experience" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <SectionTitle
           title="Experience"
