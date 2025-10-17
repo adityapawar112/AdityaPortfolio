@@ -1,0 +1,133 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Plain color scheme for light and dark modes
+   * Primary: Green/Mint (#D0E9C0), Secondary: Blue (#C0D0E9), Accent: Pink (#E9C0D0)
+   */
+  :root {
+    /* Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    /* Primary: Green/Mint */
+    --primary: 105 51% 72%;
+    --primary-light: 115 55% 77%;
+    --primary-foreground: 0 0% 13%;
+
+    /* Secondary: Blue */
+    --secondary: 217 51% 72%;
+    --secondary-light: 217 55% 77%;
+    --secondary-foreground: 0 0% 13%;
+
+    /* Accent: Pink/Rose */
+    --accent: 345 51% 72%;
+    --accent-light: 355 55% 77%;
+    --accent-foreground: 0 0% 13%;
+
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 105 51% 72%;
+
+    --radius: 0.375rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 25%;
+    --sidebar-primary: 105 51% 72%;
+    --sidebar-primary-foreground: 0 0% 13%;
+    --sidebar-accent: 217 51% 72%;
+    --sidebar-accent-foreground: 0 0% 13%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 105 51% 72%;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary: Green/Mint - darker shades */
+    --primary: 105 40% 52%;
+    --primary-light: 115 45% 58%;
+    --primary-foreground: 0 0% 95%;
+
+    /* Secondary: Blue - darker shades */
+    --secondary: 217 40% 52%;
+    --secondary-light: 217 45% 58%;
+    --secondary-foreground: 0 0% 95%;
+
+    /* Accent: Pink/Rose - darker shades */
+    --accent: 345 40% 52%;
+    --accent-light: 355 45% 58%;
+    --accent-foreground: 0 0% 95%;
+
+    --muted: 0 0% 23%;
+    --muted-foreground: 0 0% 60%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 105 40% 52%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 105 40% 52%;
+    --sidebar-primary-foreground: 0 0% 95%;
+    --sidebar-accent: 217 40% 52%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 105 40% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+@layer components {
+  .btn-hover {
+    @apply transition-all duration-300;
+  }
+}
