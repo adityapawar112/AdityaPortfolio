@@ -1,3 +1,5 @@
+import { useTheme } from "@/hooks/use-theme";
+
 interface ExperienceCardProps {
   title: string;
   company: string;
@@ -13,8 +15,13 @@ export default function ExperienceCard({
   period,
   description,
 }: ExperienceCardProps) {
+  const { theme } = useTheme();
+
   return (
-    <div className="border border-border rounded p-6 hover:border-primary/50 hover:shadow-lg transition-all duration-300 bg-card hover:bg-card/80 group animate-in fade-in slide-in-from-left-4 duration-500">
+    <div
+      className={`border border-border rounded p-6 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group animate-in fade-in slide-in-from-left-4 duration-500 ${theme === 'dark' ? 'bg-card hover:bg-card/80' : 'hover:bg-card/80'}`}
+      style={{ backgroundColor: theme === 'dark' ? '' : '#f5f5f5' }}
+    >
       <div className="mb-4">
         <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
           {title}

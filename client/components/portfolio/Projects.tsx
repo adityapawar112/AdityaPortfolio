@@ -80,11 +80,11 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 lg:pl-64">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="projects" className="py-20 lg:pl-32">
+      <div className="max-w-6xl mx-auto px-6">
         <SectionTitle
           title="Projects"
-          description="Selected projects showcasing my expertise"
+          description="Featured work and applications"
         />
 
         <div className="grid md:grid-cols-2 gap-6">

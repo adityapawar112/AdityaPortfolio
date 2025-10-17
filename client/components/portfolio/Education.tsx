@@ -1,6 +1,8 @@
 import SectionTitle from "./SectionTitle";
+import { useTheme } from "@/hooks/use-theme";
 
 export default function Education() {
+  const { theme } = useTheme();
   const educationItems = [
     {
       degree: "Bachelor of Technology in Information Technology and Data Science",
@@ -32,56 +34,44 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 lg:pl-64">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="education" className="py-20 lg:pl-32">
+      <div className="max-w-6xl mx-auto px-6">   
         <SectionTitle
           title="Education"
           description="Academic background and timeline"
         />
 
-        {/* Horizontal Timeline */}
+        {/* Vertical Timeline */}
         <div className="mb-16">
-          <div className="overflow-x-auto scrollbar-hide">
-            <div className="flex gap-6 pb-8 min-w-min">
-              {/* Timeline line */}
-              <div className="absolute top-[480px] left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent pointer-events-none" />
-
-              {educationItems.map((item, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {educationItems.map((item, index) => (
+              <div
+                key={index}
+                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Card */}
                 <div
-                  key={index}
-                  className="flex-shrink-0 w-72 animate-in fade-in slide-in-from-bottom-4 duration-500"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className={`border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-lg transition-all duration-300 group ${theme === 'dark' ? 'bg-card' : ''}`}
+                  style={{ backgroundColor: theme === 'dark' ? '' : '#f5f5f5' }}
                 >
-                  {/* Timeline dot */}
-                  <div className="flex flex-col items-center mb-6">
-                    <div className="w-4 h-4 rounded-full bg-primary border-4 border-background shadow-lg" />
-                  </div>
-
-                  {/* Card */}
-                  <div className="border border-border rounded-lg p-6 bg-card hover:border-primary/50 hover:shadow-lg transition-all duration-300 h-full group">
-                    <p className="text-sm font-bold uppercase tracking-widest text-primary mb-3">
-                      {item.year}
-                    </p>
-                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-3">
-                      {item.degree}
-                    </h3>
-                    <p className="text-primary font-medium text-sm mb-2">
-                      {item.institution}
-                    </p>
-                    <div className="space-y-1 text-xs text-muted-foreground font-light">
-                      <p>{item.location}</p>
-                      <p>{item.period}</p>
-                    </div>
+                  <p className="text-sm font-bold uppercase tracking-widest text-primary mb-3">
+                    {item.year}
+                  </p>
+                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-3">
+                    {item.degree}
+                  </h3>
+                  <p className="text-primary font-medium text-sm mb-2">
+                    {item.institution}
+                  </p>
+                  <div className="space-y-1 text-xs text-muted-foreground font-light">
+                    <p>{item.location}</p>
+                    <p>{item.period}</p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
-          {/* Scroll hint */}
-          <p className="text-sm text-muted-foreground text-center mt-4">
-            Scroll right to see older education →
-          </p>
         </div>
 
         {/* Certifications */}

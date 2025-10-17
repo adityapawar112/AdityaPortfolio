@@ -7,13 +7,12 @@ import Skills from "@/components/portfolio/Skills";
 import Education from "@/components/portfolio/Education";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
-import Sidebar from "@/components/portfolio/Sidebar";
+
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen ">
       <Header />
-      <Sidebar />
       <main className="pt-20">
         <Hero />
         <About />

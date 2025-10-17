@@ -1,7 +1,9 @@
 import SectionTitle from "./SectionTitle";
 import { Mail, Phone, Github, Linkedin, ExternalLink } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
 
 export default function Contact() {
+  const { theme } = useTheme();
   const contactLinks = [
     {
       label: "Email",
@@ -30,11 +32,11 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 lg:pl-64">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="contact" className="py-20 lg:pl-32">
+      <div className="max-w-6xl mx-auto px-6">
         <SectionTitle
-          title="Get In Touch"
-          description="Let's work together on your next project"
+          title="Contact"
+          description="Let's work together"
         />
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -46,8 +48,11 @@ export default function Contact() {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : "_self"}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : ""}
-                className="border border-border rounded p-6 hover:border-accent/50 hover:shadow-lg transition-all duration-300 bg-card hover:bg-card/80 group animate-in fade-in slide-in-from-bottom-4 duration-500"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`border border-border rounded p-6 hover:border-accent/50 hover:shadow-lg transition-all duration-300 group animate-in fade-in slide-in-from-bottom-4 duration-500 ${theme === 'dark' ? 'bg-card hover:bg-card/80' : 'hover:bg-card/80'}`}
+                style={{
+                  animationDelay: `${index * 100}ms`,
+                  backgroundColor: theme === 'dark' ? '' : '#f5f5f5'
+                }}
               >
                 <div className="flex items-start gap-4">
                   <div className="text-accent group-hover:text-accent-light transition-colors duration-300 group-hover:scale-110 transform">

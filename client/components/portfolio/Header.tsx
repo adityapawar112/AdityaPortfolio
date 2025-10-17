@@ -1,40 +1,86 @@
-import { useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import CardNav from "./CardNav";
 import { useTheme } from "@/hooks/use-theme";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
+
+  // Define navigation items for the CardNav component
+  const navItems = [
+    {
+      label: "About",
+      bgColor: theme === "dark" ? "#059669" : "#6cb654",
+      textColor: theme === "dark" ? "#ffffff" : "#052e0f",
+      links: [
+        {
+          label: "Overview",
+          href: "#about",
+          ariaLabel: "Go to About section"
+        },
+        {
+          label: "Experience",
+          href: "#experience",
+          ariaLabel: "Go to Experience section"
+        }
+      ]
+    },
+    {
+      label: "Work",
+      bgColor: theme === "dark" ? "#6cb654" : "#059669",
+      textColor: theme === "dark" ? "#052e0f" : "#ffffff",
+      links: [
+        {
+          label: "Projects",
+          href: "#projects",
+          ariaLabel: "Go to Projects section"
+        },
+        {
+          label: "Skills",
+          href: "#skills",
+          ariaLabel: "Go to Skills section"
+        }
+      ]
+    },
+    {
+      label: "Connect",
+      bgColor: theme === "dark" ? "#2d2d2d" : "#f5f5f5",
+      textColor: theme === "dark" ? "#f5f5f5" : "#2d2d2d",
+      links: [
+        {
+          label: "Contact",
+          href: "#contact",
+          ariaLabel: "Go to Contact section"
+        },
+        {
+          label: "Resume",
+          href: "/resume",
+          ariaLabel: "View Resume"
+        }
+      ]
+    }
+  ];
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border lg:hidden">
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <button
-            onClick={() => scrollToSection("hero")}
-            className="text-2xl font-bold text-foreground hover:text-primary transition-colors duration-200"
-          >
-            AP
-          </button>
+  // Handle navigation link clicks
+  const handleNavClick = (href: string) => {
+    if (href.startsWith("#")) {
+      const sectionId = href.substring(1);
+      scrollToSection(sectionId);
+    }
+  };
 
-          {/* Theme Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 hover:bg-secondary transition-colors duration-200 rounded-lg"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? (
-              <Sun className="w-5 h-5" />
-            ) : (
-              <Moon className="w-5 h-5" />
-            )}
-          </button>
-        </div>
-      </div>
-    </header>
+  return (
+    <CardNav
+      logo="/placeholder.svg"
+      logoAlt="Aditya Pawar Logo"
+      items={navItems}
+      baseColor={theme === "dark" ? "#2d2d2d" : "#f5f5f5"}
+      menuColor={theme === "dark" ? "#6cb654" : "#059669"}
+      theme={theme}
+      onThemeToggle={toggleTheme}
+    />
   );
 }

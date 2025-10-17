@@ -1,96 +1,245 @@
 import SectionTitle from "./SectionTitle";
-import SkillTile from "./SkillTile";
+import {
+  SiPython,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiRadixui,
+  SiNodedotjs,
+  SiDjango,
+  SiExpress,
+  SiPostgresql,
+  SiSupabase,
+  SiScikitlearn,
+  SiPandas,
+  SiNumpy,
+  SiGit,
+  SiGithub,
+  SiVercel,
+  SiVite
+} from "react-icons/si";
 
 export default function Skills() {
-  const skillCategories = [
-    {
-      category: "Languages",
-      skills: ["Python", "TypeScript", "JavaScript", "Java", "HTML/CSS"],
-      color: "primary" as const,
-    },
-    {
-      category: "Frontend",
-      skills: ["React", "Next.js", "Tailwind CSS", "Radix UI"],
-      color: "secondary" as const,
-    },
-    {
-      category: "Backend",
-      skills: ["Node.js", "Django", "APIs", "Webhooks", "Express"],
-      color: "accent" as const,
-    },
-    {
-      category: "Databases & ORMs",
-      skills: ["PostgreSQL", "Drizzle ORM", "Supabase", "Neon"],
-      color: "primary" as const,
-    },
-    {
-      category: "Data Science & ML",
-      skills: [
-        "Scikit-learn",
-        "Pandas",
-        "NumPy",
-        "Matplotlib",
-        "Seaborn",
-        "Jupyter Notebook",
-      ],
-      color: "secondary" as const,
-    },
-    {
-      category: "DevOps & Tools",
-      skills: [
-        "Git",
-        "GitHub",
-        "CI/CD",
-        "GitHub Actions",
-        "Vercel",
-        "Hostinger",
-        "Heroku",
-        "Vite",
-      ],
-      color: "accent" as const,
-    },
-    {
-      category: "Soft Skills",
-      skills: [
-        "Project Management",
-        "Leadership",
-        "Teamwork",
-        "Client Relations",
-        "Technical Documentation",
-      ],
-      color: "primary" as const,
-    },
+  // Languages logos
+  const languageLogos = [
+    { node: <SiPython />, title: "Python", href: "https://python.org" },
+    { node: <SiTypescript />, title: "TypeScript", href: "https://typescriptlang.org" },
+    { node: <SiJavascript />, title: "JavaScript", href: "https://javascript.com" },
+    { node: <SiHtml5 />, title: "HTML5", href: "https://html.spec.whatwg.org" },
+    { node: <SiCss3 />, title: "CSS3", href: "https://w3.org/Style/CSS" },
+  ];
+
+  // Frontend logos
+  const frontendLogos = [
+    { node: <SiReact />, title: "React", href: "https://react.dev" },
+    { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { node: <SiRadixui />, title: "Radix UI", href: "https://radix-ui.com" },
+  ];
+
+  // Backend logos
+  const backendLogos = [
+    { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+    { node: <SiDjango />, title: "Django", href: "https://djangoproject.com" },
+    { node: <SiExpress />, title: "Express", href: "https://expressjs.com" },
+  ];
+
+  // Database logos
+  const databaseLogos = [
+    { node: <SiPostgresql />, title: "PostgreSQL", href: "https://postgresql.org" },
+    { node: <SiSupabase />, title: "Supabase", href: "https://supabase.com" },
+  ];
+
+  // Data Science logos
+  const dataScienceLogos = [
+    { node: <SiPython />, title: "Python", href: "https://python.org" },
+    { node: <SiScikitlearn />, title: "Scikit-learn", href: "https://scikit-learn.org" },
+    { node: <SiPandas />, title: "Pandas", href: "https://pandas.pydata.org" },
+    { node: <SiNumpy />, title: "NumPy", href: "https://numpy.org" },
+  ];
+
+  // DevOps & Tools logos
+  const devopsLogos = [
+    { node: <SiGit />, title: "Git", href: "https://git-scm.com" },
+    { node: <SiGithub />, title: "GitHub", href: "https://github.com" },
+    { node: <SiVercel />, title: "Vercel", href: "https://vercel.com" },
+    { node: <SiVite />, title: "Vite", href: "https://vitejs.dev" },
   ];
 
   return (
-    <section id="skills" className="py-20 lg:pl-64">
+    <section id="skills" className="py-20 lg:pl-32">
       <div className="max-w-6xl mx-auto px-6">
         <SectionTitle
           title="Skills"
-          description="Technical expertise and proficiencies"
+          description="Technologies and tools I work with"
         />
 
-        <div className="space-y-12">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <h3 className="text-xl font-semibold text-foreground mb-6">
-                {category.category}
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <SkillTile
-                    key={skillIndex}
-                    label={skill}
-                    color={category.color}
-                  />
-                ))}
-              </div>
+        <div className="space-y-16">
+          {/* Languages */}
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-8">
+              Languages
+            </h3>
+            <div className="flex items-center justify-center flex-wrap gap-8">
+              {languageLogos.map((logo, index) => (
+                <a
+                  key={`${logo.title}-${index}`}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  style={{
+                    fontSize: '48px',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                  title={logo.title}
+                  aria-label={`Visit ${logo.title} website`}
+                >
+                  {logo.node}
+                </a>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Frontend */}
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-8">
+              Frontend
+            </h3>
+            <div className="flex items-center justify-center flex-wrap gap-8">
+              {frontendLogos.map((logo, index) => (
+                <a
+                  key={`${logo.title}-${index}`}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  style={{
+                    fontSize: '48px',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                  title={logo.title}
+                  aria-label={`Visit ${logo.title} website`}
+                >
+                  {logo.node}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Backend */}
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-8">
+              Backend
+            </h3>
+            <div className="flex items-center justify-center flex-wrap gap-8">
+              {backendLogos.map((logo, index) => (
+                <a
+                  key={`${logo.title}-${index}`}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  style={{
+                    fontSize: '48px',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                  title={logo.title}
+                  aria-label={`Visit ${logo.title} website`}
+                >
+                  {logo.node}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Databases */}
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-8">
+              Databases & ORMs
+            </h3>
+            <div className="flex items-center justify-center flex-wrap gap-8">
+              {databaseLogos.map((logo, index) => (
+                <a
+                  key={`${logo.title}-${index}`}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  style={{
+                    fontSize: '48px',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                  title={logo.title}
+                  aria-label={`Visit ${logo.title} website`}
+                >
+                  {logo.node}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Data Science */}
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-8">
+              Data Science & ML
+            </h3>
+            <div className="flex items-center justify-center flex-wrap gap-8">
+              {dataScienceLogos.map((logo, index) => (
+                <a
+                  key={`${logo.title}-${index}`}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  style={{
+                    fontSize: '48px',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                  title={logo.title}
+                  aria-label={`Visit ${logo.title} website`}
+                >
+                  {logo.node}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* DevOps & Tools */}
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-8">
+              DevOps & Tools
+            </h3>
+            <div className="flex items-center justify-center flex-wrap gap-8">
+              {devopsLogos.map((logo, index) => (
+                <a
+                  key={`${logo.title}-${index}`}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                  style={{
+                    fontSize: '48px',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                  title={logo.title}
+                  aria-label={`Visit ${logo.title} website`}
+                >
+                  {logo.node}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

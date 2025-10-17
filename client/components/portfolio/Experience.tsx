@@ -3,11 +3,11 @@ import ExperienceCard from "./ExperienceCard";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 lg:pl-64">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="experience" className="py-20 lg:pl-32">
+      <div className="max-w-6xl mx-auto px-6">
         <SectionTitle
           title="Experience"
-          description="Professional journey and key roles"
+          description="Professional journey and growth"
         />
 
         <div className="space-y-6">
